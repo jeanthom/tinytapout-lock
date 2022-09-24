@@ -1,0 +1,37 @@
+--- 
+# TinyTapeout project information
+#
+# As everyone will have access to all designs, try to make it easy for someone new to your design to know what
+# it does and how to operate it.
+#
+# This will be automatically collected and used to make a datasheet for the chip.
+project: 
+  author:       "Jean THOMAS"
+  title:        "Digital padlock"
+  description:  "A 4-digit electronic padlock"
+  how_it_works: "Each buttons press is detected by a rising edge detector, and each button press is decoded into a binary code. That binary code is stored in a shift-register which is continuously checked against a reference value ('the padlock code')."
+  how_to_test:  "Connect a clock generator to the clock input, connect all four buttons with a debounce circuit - the buttons should act as active high."
+  external_hw:  ""
+  doc_link:     "README.md"
+  clock_hz:     100
+  language:     "wokwi"
+  wokwi_id:     341438392303616596
+  picture:      "high-level-diagram.png"
+  inputs:
+    - clock
+    - "Button A"
+    - "Button B"
+    - "Button C"
+    - "Button D"
+    - none
+    - none
+    - none
+  outputs:
+    - none
+    - none
+    - none
+    - none
+    - none
+    - none
+    - "Button press detected"
+    - "Code valid"
