@@ -1,3 +1,9 @@
+/* 
+This file provides the mapping from the Wokwi modules to Verilog HDL
+
+It's only needed for Wokwi designs
+
+*/
 `define default_netname none
 
 module buffer_cell (
@@ -87,9 +93,9 @@ module dffsr_cell (
 
     always @(posedge clk or posedge s or posedge r) begin
         if (r)
-            q <= '0;
+            q <= 0;
         else if (s)
-            q <= '1;
+            q <= 1;
         else
             q <= d;
     end
